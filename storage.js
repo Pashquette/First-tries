@@ -174,3 +174,59 @@ if (personalMovieDB.count < 10) {
 }
 
 console.log(personalMovieDB);
+
+
+// ФУНКЦИИ
+
+let num = 20;
+function showFirstMessage(text) {
+    console.log(text);
+    num = 10;
+}
+
+showFirstMessage("Hello world!");
+console.log(num);
+
+// ---------------------------------------------------
+
+function calc (a, b) {
+    return (a + b);
+}
+
+
+// ------------------------------------------------------------
+
+const usdCurr = 57.54;
+const euroCurr = 55.48;
+let amountOfCurrency = +prompt("Введите количество валюты:", "");
+
+
+function convert(amount, curr) {
+    alert ("У вас будет: " + curr * amount + " евро");
+}
+
+convert(amountOfCurrency, euroCurr);
+
+
+// О ВОЗВРАТЕ ФУНКЦИЕЙ UNDEFINED
+
+function doNothing () {
+    
+}
+console.log(doNothing() === undefined);
+
+// ----------------------------------------------------------------------
+
+const usdCurr = 28;
+const discount = 0.9;
+
+function convert(amount, curr) {
+    return curr * amount;
+}
+
+function promotion (result) {
+    console.log(result * discount);
+}
+
+const res = convert(500, usdCurr);
+promotion (res);
