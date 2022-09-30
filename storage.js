@@ -230,3 +230,28 @@ function promotion (result) {
 
 const res = convert(500, usdCurr);
 promotion (res);
+
+
+// CALLBACK ФУНКЦИИ, ПОМЕЩЕНИЕ ФУНКЦИИ, КАК АРГУМЕНТ.
+
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+    }
+    
+    function done() {
+        console.log("Я прошел этот урок!");
+    }
+    
+    learnJS("JavaScript", done);
+    
+    // ПРИМЕР ДВА:
+    
+    function learnJS(lang, callback) {
+        console.log(`Я учу: ${lang}`);
+        callback();
+        }
+    
+    learnJS("JavaScript", function() {
+        console.log("Я прошел этот урок!")
+    });
