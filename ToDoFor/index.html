@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoFor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo">
+    <div class="todo__content">
+    <h1 class="todo__title">Покупки для маленьких</h1>
+    <div class="todo__new">
+        <input id="new" type="text" placeholder="Что же делать...?">
+        <div id="add" class="todo__add">+</div>
+        </div>
+        <div id="tasks" class="todo__list">
+            <div class="todo__task todo__task_complete">
+                <label class="todo__checkbox">
+                  <input type="checkbox">
+                  <div></div>
+                </label>
+                <div class="todo__task-text">Сухарики три корочки с семгой и сыром</div>
+                <div class="todo__task-del">-</div>
+            </div>
+            <div class="todo__task">
+                <label class="todo__checkbox">
+                  <input type="checkbox">
+                  <div></div>
+                </label>
+                <div class="todo__task-text">Киндер буэно</div>
+                <div class="todo__task-del">-</div>
+            </div>
+        </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
