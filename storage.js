@@ -481,6 +481,82 @@ const oneHeart = document.querySelector('.heart');
 console.log(oneHeart);
 
 
-//
+// КОНВЕРТЕР ВАЛЮТЫ.
 
+const usdCurr = 60.37;
+
+let amountOfCurrency = prompt("Введите количество валюты:", " ");
+
+function convert(amount, curr)
+ {
+    if (amount == null || isNaN(amount) || amount == ' ') {
+        alert ("ОШИБКА: введите числовое значение!");
+        console.log(amount);
+        
+    }
+    else {
+        alert("У вас будет: " + amount * curr + " долларов");
+        console.log(amount);
+    }
+   
+}
+
+convert(amountOfCurrency, usdCurr);
+
+// 037 Действия с элементами на странице
+
+"use strict";
+
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      hearts = document.querySelectorAll('.heart'),
+      oneHeart = document.querySelector('.heart'),
+      wrapper = document.querySelector('.wrapper');
+
+      console.dir(box);
+
+      // box.style.backgroundColor = 'blue';
+      // box.style.width = '500px';
+
+      box.style.cssText = `background-color: blue; width: 500px`;
+
+      btns[1].style.borderRadius = '100%';
+
+      circles[0].style.backgroundColor = 'red';
+
+      // for (let i = 0; i < hearts.length; i++) {
+      //   hearts[i].style.backgroundColor = 'blue';
+      // }
+
+      hearts.forEach(item => {
+        item.style.backgroundColor = 'blue';
+      });
+
+      const div = document.createElement('div');
+
+      // const text = document.createTextNode('Тут может быть Ваша реклама');
+
+      div.classList.add('black');
+
+      wrapper.append(div);
+      // wrapper.appendChild(div);
+
+      // wrapper.prepend(div);
+
+      // hearts[0].before(div);
+
+      // hearts[0].after(div);
+
+      // wrapper.insertBefore(div, hearts[1]);
+
+      // circles[0].remove();
+
+      // hearts[0].replaceWith(circles[0]);
+
+      div.innerHTML = "<h1>Hello World</h1>";
+
+      // div.textContent = 'hello';
+
+      div.insertAdjacentHTML('afterend', "<h2>Hello</h2>");
 
