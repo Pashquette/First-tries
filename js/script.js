@@ -1,35 +1,49 @@
 'use strict';
 
-const input = document.getElementById('input');
-const blockTime = document.querySelector('.time');
-const start = document.getElementById('start');
-const stop = document.getElementById('stop');
-const reset = document.getElementById('reset');
-let interval;
+// console.log('Запрос данных...');
 
+// const req = new Promise(function(resolve, reject) {
+//     setTimeout(() => {
+//         console.log("Подготовка данных...");
+    
+//         const product = {
+//             name: 'TV',
+//             price: 2000
+//         };
+    
+//         resolve(product);
+//     }, 2000);
+    
+// });
 
-blockTime.innerHTML = 0;
-input.value = 0;
+// req.then((product) => {
+//    return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             product.status = 'order';
+//             resolve(product);
+//         }, 2000);
+//     });
 
-function substractTime() {
-    if (blockTime.innerHTML > 0) {
-        blockTime.innerHTML--;
-    }
-}
+// }).then(data => {
+//     data.modify = true;
+//     return data;
+// }).then((data) => {
+//     console.log(data);
+// }).catch(() => {
+//     console.error('Произошла ошибка');
+// }).finally(() => {
+//     console.log('Finally');
+// });
 
-start.addEventListener('click', () => {
-    blockTime.innerHTML = input.value;
-    input.value = '';
-    clearInterval(interval);
-    interval = setInterval(substractTime, 1000);
-});
+const test = time => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(), time);
+    });
+};
 
-stop.addEventListener('click', () =>  {
-    clearInterval(interval);
-    input.value = blockTime.innerHTML;
-});
+// test(2000).then(() => console.log('2000ms'));
+// test(3000).then(() => console.log('3000ms'));
 
-reset.addEventListener('click', () => {
-    blockTime.innerHTML = 0;
-    input.value = 0;
+Promise.all([test(1000), test(2000)]).then(() => {
+    console.log('all');
 });
