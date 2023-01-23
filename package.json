@@ -1,0 +1,19 @@
+{
+  "name": "food-dist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^9.3.1",
+    "run": "^1.4.0",
+    "test": "^3.2.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1"
+  }
+}
