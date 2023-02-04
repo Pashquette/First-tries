@@ -8,12 +8,22 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "> 1%"
+  ],
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "npm": "^9.3.1",
     "run": "^1.4.0",
     "test": "^3.2.1"
   },
   "devDependencies": {
-    "json-server": "^0.17.1"
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "core-js": "^3.27.2",
+    "json-server": "^0.17.1",
+    "webpack-cli": "^5.0.1"
   }
 }
