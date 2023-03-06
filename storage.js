@@ -750,3 +750,5 @@ reset.addEventListener('click', () => {
     blockTime.innerHTML = 0;
     input.value = 0;
 });
+
+// ------------------------------------------------------------
